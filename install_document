@@ -1,0 +1,9 @@
+Before install the openh323,the ptlib must be installed fist.
+After that,when compile the openh323 with the version 2.10.10,
+a compile error may occure,that "NatTypes" is not a type.
+Then,what we must to do is that changing
+#if PTLIB_MAJOR==2 && PTLIB_MINOR<10
+to
+#if PTLIB_MAJOR==2 && PTLIB_MINOR<=10
+in include/openh323buildopts.h.in and include/openh323buildopts.h
+solves the problem with PTLIB 2.10.10.
