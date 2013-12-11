@@ -7,3 +7,6 @@ to
 #if PTLIB_MAJOR==2 && PTLIB_MINOR<=10
 in include/openh323buildopts.h.in and include/openh323buildopts.h
 solves the problem with PTLIB 2.10.10.
+
+when coding,we must include the <ptlib.> first ,then the file <h323.h>.
+if not ,we'll get the error "in channal.h:Pthread is not a type".
